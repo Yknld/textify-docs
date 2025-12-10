@@ -41,11 +41,17 @@
       margin-bottom: 12px;
       color: #111;
     }
+    h3 {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: #333;
+    }
     p, li {
       margin-bottom: 12px;
       color: #444;
     }
-    ul {
+    ul, ol {
       padding-left: 24px;
     }
     a {
@@ -58,103 +64,298 @@
       margin: 20px 0;
       border-radius: 0 8px 8px 0;
     }
+    .warning {
+      background: #fefce8;
+      border-left: 4px solid #eab308;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
     .contact {
       background: #f8fafc;
       padding: 20px;
       border-radius: 8px;
       margin-top: 32px;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background: #f9fafb;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🔒 Privacy Policy</h1>
-    <p class="last-updated">Last updated: December 5, 2025</p>
+    <p class="last-updated">Last updated: December 10, 2025</p>
     
-    <p>Textify ("we", "our", or "the extension") is committed to protecting your privacy. This policy explains how we handle your data.</p>
+    <p>Textify ("we", "us", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains what data we collect, how we use it, how we store it, and how we share it. By using Textify, you agree to the practices described in this policy.</p>
     
     <div class="highlight">
-      <strong>Summary:</strong> We only process files you explicitly upload. We don't sell your data. Files are processed and immediately discarded - we don't store your documents.
+      <strong>Summary:</strong> We only process files you explicitly upload. We don't sell your data. Uploaded files are processed and immediately discarded - we don't permanently store your documents or their contents.
     </div>
 
-    <h2>1. Information We Collect</h2>
-    <p><strong>Account Information:</strong></p>
+    <h2>1. Data Collection</h2>
+    <p>We collect the following categories of user data:</p>
+    
+    <h3>1.1 Account Information (Collected)</h3>
     <ul>
-      <li>Email address (for authentication)</li>
-      <li>Account balance and transaction history</li>
+      <li><strong>Email address:</strong> Required for account creation and authentication</li>
+      <li><strong>Password:</strong> Securely hashed, never stored in plain text</li>
+      <li><strong>Account creation date:</strong> For record-keeping purposes</li>
     </ul>
     
-    <p><strong>Usage Data:</strong></p>
+    <h3>1.2 Usage Data (Collected)</h3>
     <ul>
-      <li>Number of files processed (for billing)</li>
-      <li>Token usage statistics</li>
-      <li>Device identifier (anonymized, for preventing abuse)</li>
+      <li><strong>File processing records:</strong> File names, sizes, and types of documents processed (for billing and history features)</li>
+      <li><strong>Token usage:</strong> Number of AI tokens consumed (for billing purposes)</li>
+      <li><strong>Transaction history:</strong> Records of payments and balance changes</li>
+      <li><strong>Timestamps:</strong> When files were processed</li>
+    </ul>
+    
+    <h3>1.3 Device Information (Collected)</h3>
+    <ul>
+      <li><strong>Device identifier:</strong> An anonymized identifier to prevent signup bonus abuse</li>
+    </ul>
+    
+    <h3>1.4 File Content (Temporarily Processed, NOT Stored)</h3>
+    <ul>
+      <li><strong>Uploaded files:</strong> Images, PDFs, spreadsheets, and documents you upload are processed in memory and immediately discarded</li>
+      <li><strong>Extracted text:</strong> The text extracted from your files is returned to you and stored locally in your browser history - we do not retain it on our servers</li>
+    </ul>
+    
+    <h3>1.5 Data We Do NOT Collect</h3>
+    <ul>
+      <li>Browsing history or websites visited</li>
+      <li>Personal files not explicitly uploaded by you</li>
+      <li>Location data</li>
+      <li>Contacts or address book</li>
+      <li>Microphone or camera data (beyond screenshots you explicitly capture)</li>
     </ul>
 
-    <h2>2. Information We Do NOT Collect</h2>
+    <h2>2. Data Handling and Use</h2>
+    <p>We use collected data for the following purposes:</p>
+    
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Purpose</th>
+        <th>Legal Basis</th>
+      </tr>
+      <tr>
+        <td>Email address</td>
+        <td>Account authentication, password reset, important service notifications</td>
+        <td>Contract fulfillment</td>
+      </tr>
+      <tr>
+        <td>Usage data</td>
+        <td>Billing, providing extraction history feature, service improvement</td>
+        <td>Contract fulfillment, Legitimate interest</td>
+      </tr>
+      <tr>
+        <td>Device identifier</td>
+        <td>Preventing abuse of signup bonuses</td>
+        <td>Legitimate interest</td>
+      </tr>
+      <tr>
+        <td>Uploaded files</td>
+        <td>Text extraction (processed immediately, not stored)</td>
+        <td>Contract fulfillment</td>
+      </tr>
+    </table>
+    
+    <p><strong>We do NOT use your data for:</strong></p>
     <ul>
-      <li>We do NOT store your uploaded files or screenshots</li>
-      <li>We do NOT store the extracted text content permanently</li>
-      <li>We do NOT track your browsing history</li>
-      <li>We do NOT sell or share your personal data with third parties</li>
+      <li>Advertising or marketing to third parties</li>
+      <li>Selling to data brokers</li>
+      <li>Training AI models (your files are not used for training)</li>
+      <li>Profiling or automated decision-making that affects you</li>
     </ul>
 
-    <h2>3. How We Process Your Files</h2>
-    <p>When you upload a file or capture a screenshot:</p>
-    <ol>
-      <li>The file is sent to our secure backend server</li>
-      <li>We process it using OpenAI's GPT-4 Vision API for text extraction</li>
-      <li>The extracted text is returned to you</li>
-      <li>The original file is immediately discarded - we do not store it</li>
-    </ol>
-
-    <h2>4. Third-Party Services</h2>
-    <p>We use the following trusted third-party services:</p>
+    <h2>3. Data Storage</h2>
+    
+    <h3>3.1 Where Data is Stored</h3>
     <ul>
-      <li><strong>OpenAI:</strong> For AI-powered text extraction (<a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a>)</li>
-      <li><strong>Supabase:</strong> For secure authentication and account management (<a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>)</li>
-      <li><strong>Stripe:</strong> For secure payment processing (<a href="https://stripe.com/privacy" target="_blank">Stripe Privacy Policy</a>)</li>
+      <li><strong>Account data:</strong> Stored securely on Supabase servers (cloud infrastructure)</li>
+      <li><strong>Payment data:</strong> Stored and processed by Stripe (we never see your full card number)</li>
+      <li><strong>Local data:</strong> Authentication tokens and extraction history are stored locally on your device using Chrome's storage API</li>
+    </ul>
+    
+    <h3>3.2 Data Retention Periods</h3>
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Retention Period</th>
+      </tr>
+      <tr>
+        <td>Account information</td>
+        <td>Until you delete your account</td>
+      </tr>
+      <tr>
+        <td>Usage/transaction history</td>
+        <td>Until you delete your account</td>
+      </tr>
+      <tr>
+        <td>Uploaded files</td>
+        <td>Not retained - processed in memory and immediately discarded</td>
+      </tr>
+      <tr>
+        <td>Extracted text</td>
+        <td>Stored locally on your device only - you can clear this anytime</td>
+      </tr>
+      <tr>
+        <td>Device identifier</td>
+        <td>Until you delete your account or uninstall the extension</td>
+      </tr>
+    </table>
+    
+    <h3>3.3 Data Security Measures</h3>
+    <ul>
+      <li>All data transmission is encrypted using HTTPS/TLS</li>
+      <li>Passwords are hashed using industry-standard algorithms</li>
+      <li>Authentication tokens are stored securely in browser storage</li>
+      <li>Server infrastructure uses modern security practices</li>
+      <li>Access to user data is restricted to authorized personnel only</li>
     </ul>
 
-    <h2>5. Data Security</h2>
-    <p>We implement industry-standard security measures:</p>
+    <h2>4. Data Sharing</h2>
+    <p>We share user data with the following third-party services, which are essential for the operation of Textify:</p>
+    
+    <table>
+      <tr>
+        <th>Service Provider</th>
+        <th>Data Shared</th>
+        <th>Purpose</th>
+        <th>Privacy Policy</th>
+      </tr>
+      <tr>
+        <td>OpenAI</td>
+        <td>Uploaded file content (temporarily)</td>
+        <td>AI-powered text extraction</td>
+        <td><a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a></td>
+      </tr>
+      <tr>
+        <td>Supabase</td>
+        <td>Email, hashed password, usage data</td>
+        <td>Authentication and database</td>
+        <td><a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a></td>
+      </tr>
+      <tr>
+        <td>Stripe</td>
+        <td>Email, payment information</td>
+        <td>Payment processing</td>
+        <td><a href="https://stripe.com/privacy" target="_blank">Stripe Privacy Policy</a></td>
+      </tr>
+    </table>
+    
+    <div class="warning">
+      <strong>Important:</strong> When you upload a file, its content is sent to OpenAI's API for processing. OpenAI's API data usage policy states that API inputs are not used to train their models. See <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAI's API data usage policies</a> for details.
+    </div>
+    
+    <p><strong>We do NOT share your data with:</strong></p>
     <ul>
-      <li>All data transmission is encrypted via HTTPS</li>
-      <li>Passwords are securely hashed (never stored in plain text)</li>
-      <li>Authentication tokens are stored locally on your device</li>
-      <li>Payment information is handled entirely by Stripe - we never see your card details</li>
+      <li>Advertisers or ad networks</li>
+      <li>Data brokers</li>
+      <li>Social media platforms</li>
+      <li>Any other third parties not listed above</li>
+    </ul>
+    
+    <p><strong>Exceptions:</strong> We may disclose data if required by law, court order, or to protect our legal rights.</p>
+
+    <h2>5. Cookies and Tracking</h2>
+    <p>Textify does not use cookies for tracking or advertising purposes.</p>
+    <ul>
+      <li><strong>Authentication tokens:</strong> Stored in browser local storage (not cookies) for keeping you logged in</li>
+      <li><strong>No third-party trackers:</strong> We do not embed any analytics, advertising, or tracking scripts</li>
+      <li><strong>No cross-site tracking:</strong> We do not track your activity across other websites</li>
     </ul>
 
-    <h2>6. Local Storage</h2>
-    <p>The extension stores the following data locally on your device:</p>
+    <h2>6. International Data Transfers</h2>
+    <p>Your data may be processed in countries outside your country of residence, including the United States, where our service providers operate. We ensure appropriate safeguards are in place:</p>
     <ul>
-      <li>Your authentication session (for staying logged in)</li>
-      <li>Recent extraction history (for your convenience)</li>
-      <li>A device identifier (for preventing signup bonus abuse)</li>
+      <li>Our service providers (OpenAI, Supabase, Stripe) maintain compliance with international data protection standards</li>
+      <li>Data transfers are protected by encryption in transit</li>
     </ul>
-    <p>You can clear this data at any time by removing the extension.</p>
 
     <h2>7. Your Rights</h2>
-    <p>You have the right to:</p>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    
+    <h3>7.1 Access and Portability</h3>
     <ul>
-      <li>Access your account data</li>
-      <li>Delete your account and all associated data</li>
-      <li>Export your transaction history</li>
-      <li>Opt out of non-essential communications</li>
+      <li>View your account information and usage history within the extension</li>
+      <li>Request a copy of your personal data by contacting us</li>
     </ul>
+    
+    <h3>7.2 Correction</h3>
+    <ul>
+      <li>Update your email address through the account settings</li>
+      <li>Contact us to correct any inaccurate data</li>
+    </ul>
+    
+    <h3>7.3 Deletion</h3>
+    <ul>
+      <li>Delete your local extraction history within the extension</li>
+      <li>Request complete account deletion by contacting us - we will delete all your data within 30 days</li>
+    </ul>
+    
+    <h3>7.4 Restriction and Objection</h3>
+    <ul>
+      <li>You may request we stop processing your data for certain purposes</li>
+      <li>Contact us to exercise these rights</li>
+    </ul>
+    
+    <h3>7.5 Withdrawal of Consent</h3>
+    <ul>
+      <li>You may stop using the extension at any time</li>
+      <li>Uninstalling the extension removes all locally stored data</li>
+    </ul>
+    
+    <p>To exercise any of these rights, contact us at <a href="mailto:daniel.ntumbakazadi@gmail.com">daniel.ntumbakazadi@gmail.com</a>. We will respond within 30 days.</p>
 
     <h2>8. Children's Privacy</h2>
-    <p>Textify is not intended for users under 13 years of age. We do not knowingly collect personal information from children.</p>
+    <p>Textify is not intended for use by children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children. If we discover that a child has provided us with personal data, we will delete it promptly. If you believe a child has provided us with their data, please contact us.</p>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. We will notify users of any material changes by updating the "Last updated" date.</p>
+    <h2>9. California Privacy Rights (CCPA)</h2>
+    <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+    <ul>
+      <li><strong>Right to Know:</strong> You can request what personal information we collect, use, and disclose</li>
+      <li><strong>Right to Delete:</strong> You can request deletion of your personal information</li>
+      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights</li>
+      <li><strong>No Sale of Data:</strong> We do not sell your personal information</li>
+    </ul>
+
+    <h2>10. European Privacy Rights (GDPR)</h2>
+    <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have rights under the General Data Protection Regulation (GDPR):</p>
+    <ul>
+      <li>All rights listed in Section 7 above</li>
+      <li>Right to lodge a complaint with your local data protection authority</li>
+      <li>Right to data portability in a machine-readable format</li>
+    </ul>
+    <p><strong>Legal basis for processing:</strong> We process your data based on contract fulfillment (providing the service you signed up for) and legitimate interest (preventing abuse, improving the service).</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make changes:</p>
+    <ul>
+      <li>We will update the "Last updated" date at the top of this policy</li>
+      <li>For material changes, we may notify you via email or a notice in the extension</li>
+      <li>Continued use of Textify after changes constitutes acceptance of the updated policy</li>
+    </ul>
 
     <div class="contact">
-      <h2>10. Contact Us</h2>
-      <p>If you have questions about this privacy policy or your data, please contact us:</p>
-      <p>📧 Email: <a href="mailto:daniel.ntumbakazadi@gmail.com">daniel.ntumbakazadi@gmail.com</a></p>
+      <h2>12. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <p>📧 <strong>Email:</strong> <a href="mailto:daniel.ntumbakazadi@gmail.com">daniel.ntumbakazadi@gmail.com</a></p>
+      <p>We aim to respond to all inquiries within 30 days.</p>
     </div>
   </div>
 </body>
 </html>
-
